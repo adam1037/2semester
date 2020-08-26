@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areal Interaktiv</title>
+    <title>Areal Fejl</title>
 </head>
 
 <body>
@@ -19,17 +19,23 @@
         function buttonClicked() {
             let længde = document.querySelector("#længde").value;
             let bredde = document.querySelector("#bredde").value;
-            let areal = længde * bredde;
-            let resultat = længden er $ {
-                længde
+            let a = areal(længde, bredde);
+            let resultat;
+            if (isNaN(a)) {
+                resultat = "Det er ikke et tal, prøv igen!";
+            } else if (a <= 0) {
+                resultat = "Arealet er mindre end nul! Prøv igen!";
+            } else {
+                resultat = Arealet er $ {
+                    a
+                };
             }
-            meter bredden er $ {
-                bredde
-            }
-            meter.Arealet er $ {
-                areal
-            };
+
             console.log(resultat);
+        }
+
+        function areal(l, b) {
+            return l * b;
         }
 
     </script>
