@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objekter</title>
+</head>
+
+<body>
+    <article id="dyr">
+        <h3></h3>
+        <img src="" alt="">
+        <p id="type">Type: </p>
+        <p id="levested">Levested: </p>
+    </article>
+    <script>
+        let dyr = {
+            "navn": "Gris",
+            "type": "Pattedyr",
+            "levested": "svinesti",
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+        }
+
+        let destination = document.querySelector("#dyr");
+        let fuldeNavn = `${dyr.navn}`;
+        destination.querySelector("h3").textContent = fuldeNavn;
+        destination.querySelector("#type").textContent = dyr.type;
+        destination.querySelector("#levested").textContent = dyr.levested;
+        destination.querySelector("img").src = dyr.billede;
+
+        console.log(`dyr: ${dyr.navn} type: ${dyr.type}`);
+
+    </script>
+</body>
+
+</html>
